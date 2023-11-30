@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     - cron: "0 */2 * * *"
 
@@ -16,9 +16,9 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email "sxyx2008@163.com"
-          git config --local user.name "冯靖"
+          git config --local user.email "alterem520@gmail.com"
+          git config --local user.name "alterem"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
-          git commit --allow-empty -m "a commit a day keeps your girlfriend away"
+          git commit --allow-empty -m "a commit a day keeps your girlfriend away⬆"
           git push
