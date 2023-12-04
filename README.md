@@ -1,6 +1,6 @@
 # auto-green
 
-[![Build Status](https://github.com/alterem/auto-green/workflows/ci/badge.svg?branch=master)](https://github.com/alterem/auto-green/actions)
+[![Build Status](https://github.com/alterem/auto-green/workflows/ci/badge.svg?branch=main)](https://github.com/alterem/auto-green/actions)
 
 自动保持 GitHub 提交状态常绿。
 
