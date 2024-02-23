@@ -22,11 +22,11 @@ Use the scheduling feature in GitHub Actions to automatically run every period o
 A cron job syntax has five fields separated by spaces, each representing a unit of time.
 
 ```plain
-┌───────────── 分钟 (0 - 59)
-│ ┌───────────── 小时 (0 - 23)
-│ │ ┌───────────── 日 (1 - 31)
-│ │ │ ┌───────────── 月 (1 - 12 或 JAN-DEC)
-│ │ │ │ ┌───────────── 星期 (0 - 6 或 SUN-SAT)
+┌───────────── minute (0 - 59)
+│ ┌───────────── hour (0 - 23)
+│ │ ┌───────────── day of month (1 - 31)
+│ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+│ │ │ │ ┌───────────── day of week (0 - 6 or SUN-SAT)
 │ │ │ │ │
 │ │ │ │ │
 │ │ │ │ │
@@ -34,12 +34,12 @@ A cron job syntax has five fields separated by spaces, each representing a unit 
 ```
 What each time field means:
 
-|符号   | 描述        | 举例                                        |
-| ----- | -----------| -------------------------------------------|
-| `*`   | 任意值      | `* * * * *` 每天每小时每分钟                  |
-| `,`   | 值分隔符    | `1,3,4,7 * * * *` 每小时的 1 3 4 7 分钟       |
-| `-`   | 范围       | `1-6 * * * *` 每小时的 1-6 分钟               |
-| `/`   | 每         | `*/15 * * * *` 每隔 15 分钟                  |
+| Symbol| Description | Sample                                 |
+| -----| -----------| --------------------------------------|
+| `*`  | Any value  | `* * * * *` Every minute of every hour every day |
+| `,`  | Value separator | `1,3,4,7 * * * *` Every minute at 1, 3, 4, 7 past the hour  |
+| `-`  | Range      | `1-6 * * * *` Every minute from 1 through 6 past the hour |
+| `/`  | Every     | `*/15 * * * *` Every 15 minutes                 |
 
 **Note:** Due to GitHub Actions' limitation, setting it to `* * * * *` will result in a practical execution every 5 minutes.
 
