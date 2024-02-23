@@ -14,8 +14,8 @@ Keep GitHub commit status always green automatically.
 
 ## Usage
 
-- 点右上角 **Use this template** 按钮复制本 GitHub 仓库，**:warning: 千万不要 Fork，因为 fork 项目的动态并不会让你变绿 :warning:**
-- 在自己的项目中，点上方 **Actions** 选项卡进入项目 GitHub Actions 页面, 点击绿色按钮 “**I understand my workflows, go ahead and enable them**” 开启自动提交功能
+- Copy this GitHub repository by clicking the **Use this template** button in the top-right corner，**:warning: Don't Fork It, Forked Repos Don't Make You Green :warning:**
+- In your project, go into the project's GitHub Actions page by clicking the **Actions** tab at the top and click the green button “**I understand my workflows, go ahead and enable them**” Turn on Auto-Commit
 - 修改 [ci.yml 文件的第 19、20 行](https://github.com/justjavac/auto-green/blob/master/.github/workflows/ci.yml#L19) 为自己的 GitHub 账号和昵称
 - (可选) 你可以通过修改 [ci.yml 文件的第 8 行](https://github.com/justjavac/auto-green/blob/master/.github/workflows/ci.yml#L8)来调整频率
 
