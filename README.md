@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/alterem/auto-green/workflows/ci/badge.svg?branch=main)](https://github.com/alterem/auto-green/actions)
 
-自动保持 GitHub 提交状态常绿。
+Keep GitHub commit status always green automatically.
 
 > a commit a day keeps your girlfriend away.
 
