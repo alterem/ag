@@ -39,7 +39,7 @@ What each time field means:
 | `*`  | Any value  | `* * * * *` Every minute of every hour every day |
 | `,`  | Value separator | `1,3,4,7 * * * *` Every minute at 1, 3, 4, 7 past the hour  |
 | `-`  | Range      | `1-6 * * * *` Every minute from 1 through 6 past the hour |
-| `/`  | Every     | `*/15 * * * *` Every 15 minutes                 |
+| `/`  | Everything     | `*/15 * * * *` Every 15 minutes                 |
 
 **Note:** Due to GitHub Actions' limitation, setting it to `* * * * *` will result in a practical execution every 5 minutes.
 
