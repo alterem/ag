@@ -8,18 +8,18 @@ Keep GitHub commit status always green automatically.
 
 ## Principle
 
-使用 GitHub Actions 的定时任务功能，每隔一段时间自动执行 `git commit`，提交信息为 "a commit a day keeps your girlfriend away"，灵感来自知乎问题[在 GitHub 上保持 365 天全绿是怎样一种体验？](https://www.zhihu.com/question/34043434/answer/57826281)下某匿名用户的回答：
+Use the scheduling feature in GitHub Actions to automatically run every period of time `git commit`，The information submitted is "a commit a day keeps your girlfriend away"，Inspired by Zhihu Question[在 GitHub 上保持 365 天全绿是怎样一种体验？](https://www.zhihu.com/question/34043434/answer/57826281) Response from an anonymous user:
 
-> 曾经保持了 200 多天全绿，但是冷落了女朋友，一直绿到现在。
+> Used to keep a 200 day plus green streak, but have neglected my girlfriend, now I have the ultimate green streak.
 
 ## Usage
 
 - Copy this GitHub repository by clicking the **Use this template** button in the top-right corner，**:warning: Don't Fork It, Forked Repos Don't Make You Green :warning:**
 - In your project, go into the project's GitHub Actions page by clicking the **Actions** tab at the top and click the green button “**I understand my workflows, go ahead and enable them**” Turn on Auto-Commit
-- 修改 [ci.yml 文件的第 19、20 行](https://github.com/justjavac/auto-green/blob/master/.github/workflows/ci.yml#L19) 为自己的 GitHub 账号和昵称
-- (可选) 你可以通过修改 [ci.yml 文件的第 8 行](https://github.com/justjavac/auto-green/blob/master/.github/workflows/ci.yml#L8)来调整频率
+- Modify [line 19, 20 of the ci.yml file](https://github.com/justjavac/auto-green/blob/master/.github/workflows/ci.yml#L19) with your GitHub account and nickname
+- (Optional) You can adjust the frequency by modifying the 8th line of the [ci.yml file](https://github.com/justjavac/auto-green/blob/master/.github/workflows/ci.yml#L8).
 
-计划任务语法有 5 个字段，中间用空格分隔，每个字段代表一个时间单位。
+A cron job syntax has five fields separated by spaces, each representing a unit of time.
 
 ```plain
 ┌───────────── 分钟 (0 - 59)
@@ -32,8 +32,7 @@ Keep GitHub commit status always green automatically.
 │ │ │ │ │
 * * * * *
 ```
-
-每个时间字段的含义：
+What each time field means:
 
 |符号   | 描述        | 举例                                        |
 | ----- | -----------| -------------------------------------------|
@@ -42,7 +41,7 @@ Keep GitHub commit status always green automatically.
 | `-`   | 范围       | `1-6 * * * *` 每小时的 1-6 分钟               |
 | `/`   | 每         | `*/15 * * * *` 每隔 15 分钟                  |
 
-**注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
+**Note:** Due to GitHub Actions' limitation, setting it to `* * * * *` will result in a practical execution every 5 minutes.
 
 ## License
 
